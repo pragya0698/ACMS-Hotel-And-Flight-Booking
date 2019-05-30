@@ -81,11 +81,10 @@ window.onload = function(){
 			roomtypes[type] = roomtype;
 			capacity = document.getElementById("capacity"+type).value;
 			description = document.getElementById("description"+type).value;
-			bprice =  document.getElementById("bprice"+type).value;
-			mprice =  document.getElementById("mprice"+type).value;
+			price =  document.getElementById("price"+type).value;
 			no_rooms =document.getElementById("no_rooms"+type).value;
 			console.log(roomtype);
-			if( roomtype=""||capacity=="" || description==""||bprice==""||mprice==""||no_rooms==""){
+			if( roomtype=""||capacity=="" || description==""||price==""||no_rooms==""){
 				fillthis = document.getElementById("fillthis");
 				var rm ="rd";
 				if (type==1)
@@ -175,7 +174,7 @@ window.onload = function(){
 				capacity = document.getElementById("capacity"+i).value;
 				description = document.getElementById("description"+i).value;
 				bprice =  document.getElementById("bprice"+i).value;
-				mprice =  document.getElementById("mprice"+i).value;
+				mprice =  document.getElementById("mprice"+i).value
 				no_rooms =document.getElementById("no_rooms"+i).value;
 				if(roomtype=""||capacity=="" || description==""||bprice==""||mprice==""||no_rooms==""){
 					var er = document.getElementById("error")
@@ -320,7 +319,10 @@ window.onload = function(){
 								console.log(roomurl);
 								console.log(roomsurl);
 								if(sum<1){
-									window.location.replace(url);
+									console.log(url);
+									url1 = url.replace("#",'No');
+									//alert(url1);
+									window.location.replace(url1);
 									sum = 1;
 								}	
 							}

@@ -106,8 +106,9 @@ window.onload = function(){
 		er.innerHTML = htm;
 	}
 	else{
+		
 		var url = "/api/oper_register?name="+name+"&city="+city+"&add="+add+"&ct="+ctime+"&et="+etime+"&img="+img+"&lat="+lat+"&long="+longi+"&email="+email+"&phno="+phno;
-		window.location.replace(url);
+		//window.location.replace(url);
 	}
 });
 	function do2(data,name,city){
